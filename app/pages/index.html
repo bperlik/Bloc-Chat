@@ -4,45 +4,40 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>Bloc Chat</title>
-	
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="/styles/main.css">
-	<link rel="stylesheet" href="/styles/normalize.css">
-	<link rel="stylesheet" href="/styles/home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
 
 	<ui-view></ui-view>
 
-	<!-- Libraries and Frameworks -->
+	<!-- frameworks and libraries-->
 
-	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
 	<script>
 		// Initialize Firebase
 		var config = {
-			apiKey: "AIzaSyC_Z7oisZy2bxUwH6KHQ8ncHhwNSVRh14E",
-			authDomain: "bloc-chat-57f99.firebaseapp.com",
-			databaseURL: "https://bloc-chat-57f99.firebaseio.com",
-			storageBucket: "bloc-chat-57f99.appspot.com",
-			messagingSenderId: "339628672141"
+			apiKey: "AIzaSyCEejKUN7DS41y67HBHvFgm7O_pwdiHb9U",
+			authDomain: "bloc-chat-56eec.firebaseapp.com",
+			databaseURL: "https://bloc-chat-56eec.firebaseio.com",
+			storageBucket: "bloc-chat-56eec.appspot.com",
+			messagingSenderId: "718838355439"
 		};
 		firebase.initializeApp(config);
 	</script>
 
-	<!-- Angular -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
-
-	<!-- ui-router -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
-	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+	<!-- local scripts -->
 	<script src="/scripts/app.js"></script>
-	<script src="/scripts/services.Room.js"></script>
 	<script src="/scripts/controllers/HomeCtrl.js"></script>
+	<script src="/scripts/services/Room.js"></script>
 
 </body>
 

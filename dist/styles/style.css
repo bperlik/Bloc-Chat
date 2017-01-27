@@ -1,0 +1,26 @@
+.sidebar {
+	clear: both;
+	background-color: aliceblue;
+	height: 1000px;
+}
+
+.sidebar .header {
+	/*    margin: auto;*/
+	padding-top: 15px;
+}
+
+.sidebar .header .title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.sidebar .rooms-list {
+	margin: auto;
+	padding-top: 15px;
+}
+
+.sidebar .rooms-list .chatrooms {
+	text-align: center;
+	font-size: 25px;
+	*/
+}

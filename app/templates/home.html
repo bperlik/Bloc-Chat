@@ -1,8 +1,58 @@
-<div class="hero-content">
-	<p class="hero-title">Chat Rooms</p>
-	<ul>
-		<li ng-repeat="room in rooms.rooms">
-			{{ room.name }}
-		</li>
-	</ul>
-</div>
+<section>
+	<div class="sidebar">
+		<div class="header">
+			<p class="title">Bloc Chat</p>
+
+			<table class="rooms-list">
+
+				<tr ng-repeat="room in chatRooms" class="chatrooms">
+					<th scope="row"></th>
+					<td><a ng-link="['RoomDetail', {id: room.$id}]"> {{ room.$id }}</a>
+						<td></td>
+
+				</tr>
+
+			</table>
+
+		</div>
+	</div>
+</section>
+
+<!--archived code
+
+{{ $index + 1 }}
+
+<td><a ng-link="['RoomDetail', {id: room.$id}]">{{ room.$name }}</a></td>
+
+<div ng-repeat="room in chatRooms">
+					<tr class="nav-list">
+						<td>
+							<h4>Room {{ $index + 1 }}: {{ $name }}</h4>
+						</td>
+					</tr>
+				</div>
+
+
+
+
+<tr ng-repeat="room in $ctrl.rooms">
+			<th scope="row">{{ $index + 1 }}</th>
+			<td ng-if="showKey"><a ng-link="['RoomDetail', {id: room.$id}]">{{ room.$id }}</a></td>
+			<td><a ng-link="['RoomDetail', {id: room.$id}]">{{ room.name }}</a></td>
+		</tr>
+
+
+
+
+<div ng-repeat="room in home.chatRooms" class="chatrooms">
+					<p>{{ room.name }}</p>
+	
+	
+			<div ng-repeat="room in rooms" class="chatrooms">
+					<p>{{ name }}</p>		
+																				
+
+<section class="rooms" ng-repeat="room in rooms">{{room.name}}
+</section>
+<br>		
+																																												-->
