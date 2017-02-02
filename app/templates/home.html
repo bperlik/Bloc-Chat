@@ -7,8 +7,8 @@
 
 				<tr ng-repeat="room in chatRooms" class="chatrooms">
 					<th scope="row"></th>
-					<td><a ng-link="['RoomDetail', {id: room.$id}]"> {{ room.$id }}</a>
-						<td></td>
+					<td><a ng-link="['RoomDetail', {id: room.$id}]"> {{room.$id}} {{ room.name }}</a>
+					</td>				
 
 				</tr>
 
@@ -19,6 +19,9 @@
 </section>
 
 <!--archived code
+
+
+
 
 {{ $index + 1 }}
 
