@@ -1,0 +1,9 @@
+ctrlp.vim               vim-emblem              vim-rails
+dash.vim                vim-endwise             vim-rake
+nerdtree                vim-fugitive            vim-rooter
+swift.vim               vim-haml                vim-rvm
+tagbar                  vim-ios                 vim-slim
+tcomment_vim            vim-javascript          vim-surround
+vim-bundler             vim-markdown            vim-unimpaired
+vim-coffee-script       vim-mustache-handlebars vim-vroom
+              vim-pathogen
