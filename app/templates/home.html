@@ -3,7 +3,7 @@
 
 		<!--  the page title -- in nav bar -->
 
-		<li class='active' href="#">
+		<li class='pagetitle' href="#">
 			<h3>Bloc Chat</h3>
 		</li>
 
@@ -12,8 +12,6 @@
 		<li ng-controller='ModalCtrl as modal'>
 			<button type="button" class="btn btn-default" ng-click="modal.open()">New room</button>
 		</li>
-
-		<!-- <li><a href="#about">About</a></li> -->
 
 		<!-- a list of available chat rooms in nav bar-->
 
@@ -29,8 +27,7 @@
 
 	<div class="messages-container">
 		<h3>{{ currentRoom.$value }}</h3>
-		<div class="message-container" ng-repeat="message in messages">
-			{{ message.username }} ({{ message.sentAt }})
+		<div ng-repeat="message in messages"> {{ message.username }} (sent at: {{ message.sentAt }})
 			<br/> - {{ message.content }}
 		</div>
 	</div>
