@@ -13,6 +13,11 @@
 		overflow: auto;
 	}
 	
+	li .pagetitle {
+		background-color: cornflowerblue;
+		color: aliceblue;
+	}
+	
 	li a {
 		display: block;
 		color: #000000;
