@@ -15,6 +15,7 @@
 				this.animationsEnabled = !this.animationsEnabled;
 			};
 		}
+		//return currentUser;
 	}
 
 	angular

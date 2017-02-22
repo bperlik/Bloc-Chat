@@ -1,34 +1,44 @@
 <section>
-	<ul>
+	<div>
+		<ul>
 
-		<!--  the page title -- in nav bar -->
-		<li class='pagetitle' href="#">
-			<h3>Bloc Chat</h3>
-		</li>
+			<!--  the page title -- in nav bar -->
+			<li class='pagetitle' href="#">
+				<h3>Bloc Chat</h3>
+			</li>
+			<!-- a button to open modal form to create a new room in nav bar -->
+			<li ng-controller='ModalCtrl as modal'>
+				<button type="button" class="btn btn-primary" ng-click="modal.open()">New room</button>
+			</li>
 
-		<!-- a button to open modal form to create a new room in nav bar -->
-		<li ng-controller='ModalCtrl as modal'>
-			<button type="button" class="btn btn-default" ng-click="modal.open()">New room</button>
-		</li>
+			<!-- a list of available chat rooms in nav bar-->
+			<li>
+				<a href="#" ng-repeat="room in chatRooms" ng-click="setCurrentRoom(room)">
+					<!-- class="links-container" -->
+					<h4>{{room.$value}}</h4></a>
+			</li>
 
-		<!-- a list of available chat rooms in nav bar-->
-		<li>
-			<a href="#" ng-repeat="room in chatRooms" ng-click="setCurrentRoom(room)">
-				<!-- class="links-container" -->
-				<h4>{{room.$value}}</h4></a>
-		</li>
+		</ul>
 
-	</ul>
-
-	<!-- a container for the list of messages in the currently selected room -->
-	<div class="messages-container">
-		<h3>{{ currentRoom.$value }}</h3>
-		<div ng-repeat="message in messages"><strong> {{ message.username }}</strong> (sent at: {{ message.sentAt }})
-			<br/> - {{ message.content }}
-			<br/>
-			<br/>
-
+		<!-- a container for the list of messages in the currently selected room -->
+		<div class="messages-container">
+			<h4>{{ currentRoom.$value }}</h4>
+			<div ng-repeat="message in messages"><strong> {{ message.username }}</strong> (sent at: {{ message.sentAt | date:'y MMM dd, hh:mm:ss a' }}
+				<br/> - {{ message.content }}
+				<br/>
+				<br/>
+			</div>
 		</div>
+
 	</div>
+
+	<!-- a sticky footer container and send button to send a new message
+        to current room with current id -->
+	<div class="footer" ng-show="currentRoom">
+		<h3 Write your message here...></h3> {{ currentUser }}:
+		<input ng-model="newMessage" />
+		<button class="btn btn-default" type="button" ng-click="sendMessage(currentRoom)"> Send </button>
+	</div>
+
 
 </section>
